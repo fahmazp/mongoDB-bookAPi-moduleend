@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 mongoose
-  .connect("mongodb+srv://ashrfhmz777:tLGeg8IkddsbMJms@main.w0wms.mongodb.net/bookDatabase?retryWrites=true&w=majority&appName=main")
+  .connect(process.env.DB_CONNECTION_LINK)
   .then(() => {
     console.log("DB connected successfully");
   })
